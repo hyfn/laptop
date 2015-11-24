@@ -64,15 +64,22 @@ What it sets up
 * [ImageMagick] for cropping and resizing images
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
 * [Postgres] for storing relational data
+* [MySql] for storing relational data in HYFN8 Classic
+* [SQLite] for storing relational data in quick prototyping
+* [Memcached] Distributed memory object caching system
 * [Qt] for headless JavaScript testing via Capybara Webkit
 * [Rbenv] for managing versions of Ruby
 * [RCM] for managing company and personal dotfiles
 * [Redis] for storing key-value data
 * [Ruby Build] for installing Rubies
-* [Ruby] stable for writing general-purpose code
+* [Ruby] stable for writing general-purpose code (versions: 1.9.3 and 2.2.3)
 * [The Silver Searcher] for finding things in files
 * [Tmux] for saving project state and switching between projects
 * [Zsh] as your shell
+* [Sequel Pro] database management application for working with MySQL databases
+* [Pgweb] Web-based PostgreSQL database browser
+* [iTerm2] a terminal emulator for Mac OSX
+* [HipChat] Group and private chat, file sharing, and integrations
 
 [Bundler]: http://bundler.io/
 [Exuberant Ctags]: http://ctags.sourceforge.net/
@@ -84,6 +91,9 @@ What it sets up
 [Node.js]: http://nodejs.org/
 [NPM]: https://www.npmjs.org/
 [Postgres]: http://www.postgresql.org/
+[MySql]: http://dev.mysql.org
+[SQLite]: http://sqlite.org
+[Memcached]: http://memcached.org
 [Qt]: http://qt-project.org/
 [Rbenv]: https://github.com/sstephenson/rbenv
 [RCM]: https://github.com/thoughtbot/rcm
@@ -93,6 +103,10 @@ What it sets up
 [The Silver Searcher]: https://github.com/ggreer/the_silver_searcher
 [Tmux]: http://tmux.sourceforge.net/
 [Zsh]: http://www.zsh.org/
+[Sequel Pro]: http://www.sequelpro.com
+[Pgweb]: https://github.com/sosedoff/
+[iTerm2]: https://www.iterm2.com/
+[HipChat]: https://www.hipchat.com/
 
 It should take less than 15 minutes to install (depends on your machine).
 
