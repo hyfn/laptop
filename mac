@@ -147,6 +147,12 @@ brew_install_or_upgrade 'qt'
 brew_install_or_upgrade 'hub'
 brew_install_or_upgrade 'node'
 
+# Install Mysql, sqlite and memcached for HYFN8
+brew_install_or_upgrade 'mysql'
+brew_launchctl_restart 'mysql'
+brew_install_or_upgrade 'sqlite'
+brew_install_or_upgrade 'memcached'
+
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
 
@@ -157,14 +163,20 @@ brew_install_or_upgrade 'openssl'
 brew unlink openssl && brew link openssl --force
 brew_install_or_upgrade 'libyaml'
 
-ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
+# set default Ruby version (1.9.3-p286 or 2.2.3)
+ruby_version="1.9.3-p286"
 
 eval "$(rbenv init - zsh)"
 
-if ! rbenv versions | grep -Fq "$ruby_version"; then
-  rbenv install -s "$ruby_version"
+# Install HYFN8 Classic Ruby version
+if ! rbenv versions | grep -Fq "1.9.3-p286"; then
+  rbenv install -s "1.9.3-p286"
 fi
 
+# Install HYFN8 latest Ruby version
+if ! rbenv versions | grep -Fq "2.2.3"; then
+  rbenv install -s "2.2.3"
+fi
 rbenv global "$ruby_version"
 rbenv shell "$ruby_version"
 
@@ -182,6 +194,17 @@ if ! command -v rcup >/dev/null; then
   brew_tap 'thoughtbot/formulae'
   brew_install_or_upgrade 'rcm'
 fi
+
+# Install Homebrew Cask
+if ! command brew cask >/dev/null; then
+  brew_tap 'caskroom/cask'
+  brew_install_or_upgrade 'brew-cask'
+fi
+
+brew cask install sequel-pro
+brew cask install pgweb
+brew cask install iterm2
+brew cask install hipchat
 
 if [ -f "$HOME/.laptop.local" ]; then
   . "$HOME/.laptop.local"
