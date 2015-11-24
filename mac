@@ -164,13 +164,13 @@ brew unlink openssl && brew link openssl --force
 brew_install_or_upgrade 'libyaml'
 
 # set default Ruby version (1.9.3-p286 or 2.2.3)
-ruby_version="1.9.3-p286"
+ruby_version="1.9.3-p551"
 
 eval "$(rbenv init - zsh)"
 
 # Install HYFN8 Classic Ruby version
-if ! rbenv versions | grep -Fq "1.9.3-p286"; then
-  rbenv install -s 1.9.3-p286
+if ! rbenv versions | grep -Fq "1.9.3-p551"; then
+  rbenv install -s 1.9.3-p551
 fi
 
 # Install HYFN8 latest Ruby version
