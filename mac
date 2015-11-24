@@ -170,12 +170,12 @@ eval "$(rbenv init - zsh)"
 
 # Install HYFN8 Classic Ruby version
 if ! rbenv versions | grep -Fq "1.9.3-p286"; then
-  rbenv install -s "1.9.3-p286"
+  rbenv install -s 1.9.3-p286
 fi
 
 # Install HYFN8 latest Ruby version
 if ! rbenv versions | grep -Fq "2.2.3"; then
-  rbenv install -s "2.2.3"
+  rbenv install -s 2.2.3
 fi
 rbenv global "$ruby_version"
 rbenv shell "$ruby_version"
