@@ -1,0 +1,13 @@
+#!/bin/sh
+
+## Brew Cask
+brew cask install google-chrome
+brew cask install sublime-text
+# brew cask install textmate
+brew cask install tower
+
+## Gems
+gem_install_or_update 'tmuxinator'
+
+## Homebrew
+#brew_install_or_upgrade ''
