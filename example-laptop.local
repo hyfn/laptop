@@ -1,13 +1,51 @@
 #!/bin/sh
 
-## Brew Cask
-brew cask install google-chrome
-brew cask install sublime-text
-# brew cask install textmate
-brew cask install tower
+##
+# GUI/IDE Editor
+# ----------
+# Sublime Text 2
+# brew_cask_install_or_upgrade 'sublime-text'
 
-## Gems
+# Sublime Text 3
+brew_cask_install_or_upgrade 'sublime-text3'
+
+# TextMate
+# brew_cask_install_or_upgrade 'textmate'
+
+# RubyMine v7
+# brew_cask_install_or_upgrade 'rubymine7'
+
+# RubyMine v8
+# brew_cask_install_or_upgrade 'rubymine'
+
+##
+# Misc
+# ----------
+# Google Chrome
+brew_cask_install_or_upgrade 'google-chrome'
+
+# Git Tower v1.x
+brew_cask_install_or_upgrade 'tower'
+
+# Git Tower v2.x
+brew_cask_install_or_upgrade 'tower-beta'
+
+# SourceTree
+# brew_cask_install_or_upgrade 'sourcetree'
+
+# Dash (https://kapeli.com/dash)
+brew_cask_install_or_upgrade 'dash'
+
+# Alfred (https://www.alfredapp.com/)
+brew_cask_install_or_upgrade 'alfred'
+
+# Evernote
+brew_cask_install_or_upgrade 'evernote'
+
+
+
+##
+# Gems
+# ----------
 gem_install_or_update 'tmuxinator'
 
-## Homebrew
-#brew_install_or_upgrade ''
