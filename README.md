@@ -25,8 +25,11 @@ Install
 Download, review, then execute the script:
 
 ```sh
-curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
-less mac
+cd ~
+curl --remote-name https://raw.githubusercontent.com/hyfn/laptop/master/mac
+curl --remote-name https://raw.githubusercontent.com/hyfn/laptop/master/example-laptop.local
+less example-laptop.local
+mv example-laptop.local .laptop.local
 sh mac 2>&1 | tee ~/laptop.log
 ```
 
@@ -120,17 +123,12 @@ For example:
 ```sh
 #!/bin/sh
 
-brew_tap 'caskroom/cask'
-brew_install_or_upgrade 'brew-cask'
-
-brew cask install dropbox
-brew cask install google-chrome
-brew cask install rdio
-
 gem_install_or_update 'parity'
 
 brew_install_or_upgrade 'tree'
 brew_install_or_upgrade 'watch'
+
+brew_cask_install_or_upgrade 'firefox'
 ```
 
 Write your customizations such that they can be run safely more than once.
@@ -143,29 +141,6 @@ can be used in your `~/.laptop.local`.
 
 See the [wiki](https://github.com/thoughtbot/laptop/wiki)
 for more customization examples.
-
-Contributing
-------------
-
-Edit the `mac` file.
-Document in the `README.md` file.
-Follow shell style guidelines by using [ShellCheck] and [Syntastic].
-
-```sh
-brew install shellcheck
-```
-
-[ShellCheck]: http://www.shellcheck.net/about.html
-[Syntastic]: https://github.com/scrooloose/syntastic
-
-Thank you, [contributors]!
-
-[contributors]: https://github.com/thoughtbot/laptop/graphs/contributors
-
-By participating in this project,
-you agree to abide by the thoughtbot [code of conduct].
-
-[code of conduct]: https://thoughtbot.com/open-source-code-of-conduct
 
 License
 -------
