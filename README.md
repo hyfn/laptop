@@ -10,14 +10,11 @@ based on what is already installed on the machine.
 Requirements
 ------------
 
-We support:
+We've tried:
 
-* OS X Mavericks (10.9)
-* OS X Yosemite (10.10)
 * OS X El Capitan (10.11)
 
-Older versions may work but aren't regularly tested. Bug reports for older
-versions are welcome.
+Older versions may work but aren't regularly tested.
 
 Install
 -------
@@ -30,21 +27,20 @@ curl --remote-name https://raw.githubusercontent.com/hyfn/laptop/master/mac
 curl --remote-name https://raw.githubusercontent.com/hyfn/laptop/master/example-laptop.local
 less example-laptop.local
 mv example-laptop.local .laptop.local
+
 sh mac 2>&1 | tee ~/laptop.log
 ```
 
 Optionally, [install thoughtbot/dotfiles][dotfiles].
+You may also use [Garrett's local dotfile overrides][dotfiles-local] 
 
 [dotfiles]: https://github.com/thoughtbot/dotfiles#install
+[dotfiles-local]: https://github.com/garrettd714/dotfiles-local
 
 Debugging
 ---------
 
 Your last Laptop run will be saved to `~/laptop.log`.
-Read through it to see if you can debug the issue yourself.
-If not, copy the lines where the script failed into a
-[new GitHub Issue](https://github.com/thoughtbot/laptop/issues/new) for us.
-Or, attach the whole log file as an attachment.
 
 OS X El Capitan (10.11)
 -----------------------
@@ -54,6 +50,8 @@ Capitan due to permission changes to the /usr directory (within which the Homebr
 installation is typically located). See the [Homebrew El Capitan troubleshooting instructions](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/El_Capitan_and_Homebrew.md)
 for steps to resolve the permissions issues that interfere with Homebrew's
 installation.
+
+**Note**: You shouldn't have any problems with a up-to-date machine as of 11/2015
 
 What it sets up
 ---------------
