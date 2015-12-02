@@ -16,6 +16,12 @@ We've tried:
 
 Older versions may work but aren't regularly tested.
 
+PreInstall
+----------
+
+* Install Xcode from the Mac App Store
+* Install the Command Line Tools for your OS/Xcode version
+
 Install
 -------
 
@@ -36,6 +42,14 @@ You may also use [Garrett's local dotfile overrides][dotfiles-local]
 
 [dotfiles]: https://github.com/thoughtbot/dotfiles#install
 [dotfiles-local]: https://github.com/garrettd714/dotfiles-local
+
+PostInstall
+-----------
+
+* Setup RSA Key for Github
+* [Continue with installation][hyfn8-readme]
+
+[hyfn8-readme]: https://github.com/hyfn/hyfn8r/#development-environment-setup
 
 Debugging
 ---------
